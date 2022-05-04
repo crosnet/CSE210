@@ -3,6 +3,7 @@ Author: Emmanuel Odonkor
 '''
 print('A TIC-TAC-TOE GAME')
 print('-----------------------------------')
+#creating a main function that will hold the rest of the other functions
 def main():
     player = next_player("")
     board = create_board()
