@@ -2,7 +2,7 @@ import random
 
 
 # TODO: Implement the Die class as follows...
-
+class Die:
 # 1) Add the class declaration. Use the following class comment.
     """A small cube with a different number of spots on each of its six sides.
 
@@ -15,15 +15,28 @@ import random
     """
 
 # 2) Create the class constructor. Use the following method comment.
+    def __init__(self):
         """Constructs a new instance of Die with a value and points attribute.
 
         Args:
             self (Die): An instance of Die.
         """
-
 # 3) Create the roll(self) method. Use the following method comment.
         """Generates a new random value and calculates the points.
-        
+
         Args:
             self (Die): An instance of Die.
         """
+        self.value = ''
+        self.points = ''
+
+    def roll(self):
+        self.value = random.randint(1, 6)
+      
+        if (self.value == 5):
+            self.points = 50
+        elif (self.value == 1):
+            self.points = 100
+        else:
+            self.points = 0
+
